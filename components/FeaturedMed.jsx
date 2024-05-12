@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
     height: 160,
   },
   flatList: {
-    flex: 1,
     flexDirection: "row",
     width: "100%",
   },

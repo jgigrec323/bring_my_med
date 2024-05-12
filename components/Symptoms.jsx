@@ -31,7 +31,7 @@ const Symptoms = () => {
   ]);
   return (
     <View style={styles.container}>
-      <Text style={{ fontWeight: "bold", fontSize: 18, marginBottom: 15 }}>
+      <Text style={{ fontWeight: "bold", fontSize: 18, marginBottom: 2 }}>
         How are you feeling ?
       </Text>
       <View style={styles.featuredSymptoms}>
@@ -55,14 +55,6 @@ export default Symptoms;
 const styles = StyleSheet.create({
   container: {
     marginTop: 25,
-    height: 150,
-    width: "100%",
-  },
-  flatList: {
     height: 100,
-
-    flex: 1,
-    width: "100%",
-    backgroundColor: "yellow",
   },
 });
