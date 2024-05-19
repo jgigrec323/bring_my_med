@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import SymptomsItem from "./SymptomsItem";
 
 const Symptoms = () => {
-  const [featuredSymptoms, setfeaturedSymptoms] = useState([
+  const featuredSymptoms = [
     {
       id: 1,
       title: "Colds & Flu",
@@ -28,7 +28,7 @@ const Symptoms = () => {
       id: 6,
       title: "Diarrhea",
     },
-  ]);
+  ];
   return (
     <View style={styles.container}>
       <Text style={{ fontWeight: "bold", fontSize: 18, marginBottom: 2 }}>

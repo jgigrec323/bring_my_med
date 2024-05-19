@@ -1,19 +1,12 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import React from "react";
 import { COLORS } from "../constants";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { FontAwesome5 } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
 
-const FixedBottomBtn = () => {
+const FixedBottomTextBtn = ({ children }) => {
   return (
     <View style={styles.container}>
       <Pressable style={styles.btnContainer}>
-        <View style={styles.roundedcircle}></View>
-        <MaterialCommunityIcons name="pill" size={24} color="white" />
-        <FontAwesome5 name="receipt" size={24} color="white" />
-        <AntDesign name="hearto" size={24} color="white" />
-        <AntDesign name="setting" size={24} color="white" />
+        <Text style={styles.text}>{children}</Text>
       </Pressable>
     </View>
   );
@@ -50,6 +43,11 @@ const styles = StyleSheet.create({
     borderRadius: 150,
     left: 31,
   },
+  text: {
+    color: COLORS.gray,
+    fontSize: 22,
+    fontWeight: "bold",
+  },
 });
 
-export default FixedBottomBtn;
+export default FixedBottomTextBtn;

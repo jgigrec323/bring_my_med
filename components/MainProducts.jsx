@@ -1,8 +1,16 @@
-import { View, Text, StyleSheet, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import React, { useState } from "react";
 import ProductCard from "./ProductCard";
+import { useRouter } from "expo-router";
 
 const MainProducts = () => {
+  const router = useRouter();
   const [products, setProducts] = useState([
     // Add your product data here
 
@@ -16,7 +24,13 @@ const MainProducts = () => {
   const renderItem = ({ item, index }) => {
     return (
       <View style={styles.productContainer}>
-        <ProductCard key={item.id} product={item} />
+        <TouchableOpacity
+          onPress={() => {
+            router.push(`/products/${item.id}`);
+          }}
+        >
+          <ProductCard key={item.id} product={item} />
+        </TouchableOpacity>
       </View>
     );
   };
