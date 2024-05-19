@@ -4,8 +4,10 @@ import { styles } from "../styles/profileBar";
 import { MaterialIcons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const ProfileBar = () => {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       <View style={styles.left}>
@@ -26,10 +28,20 @@ const ProfileBar = () => {
       </View>
       <View style={styles.right}>
         <View style={styles.iconContainer}>
-          <AntDesign name="shoppingcart" size={24} color="white" />
+          <AntDesign
+            onPress={() => router.push("/cart")}
+            name="shoppingcart"
+            size={24}
+            color="white"
+          />
         </View>
         <View style={styles.iconContainer}>
-          <Ionicons name="notifications-outline" size={24} color="white" />
+          <Ionicons
+            onPress={() => router.push("/notifications")}
+            name="notifications-outline"
+            size={24}
+            color="white"
+          />
         </View>
       </View>
     </View>

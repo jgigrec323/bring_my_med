@@ -4,17 +4,39 @@ import { COLORS } from "../constants";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const FixedBottomBtn = () => {
+  const router = useRouter();
   return (
     <View style={styles.container}>
-      <Pressable style={styles.btnContainer}>
+      <View style={styles.btnContainer}>
         <View style={styles.roundedcircle}></View>
-        <MaterialCommunityIcons name="pill" size={24} color="white" />
-        <FontAwesome5 name="receipt" size={24} color="white" />
-        <AntDesign name="hearto" size={24} color="white" />
-        <AntDesign name="setting" size={24} color="white" />
-      </Pressable>
+        <MaterialCommunityIcons
+          onPress={() => router.push("/home")}
+          name="pill"
+          size={24}
+          color="white"
+        />
+        <FontAwesome5
+          onPress={() => router.push("/receipt")}
+          name="receipt"
+          size={24}
+          color="white"
+        />
+        <AntDesign
+          onPress={() => router.push("/liked")}
+          name="hearto"
+          size={24}
+          color="white"
+        />
+        <AntDesign
+          onPress={() => router.push("/settings")}
+          name="setting"
+          size={24}
+          color="white"
+        />
+      </View>
     </View>
   );
 };
