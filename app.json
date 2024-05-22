@@ -1,6 +1,6 @@
 {
     "expo": {
-        "name": "bring_my_med",
+        "name": "Bring my med",
         "slug": "bring_my_med",
         "version": "1.0.0",
         "orientation": "portrait",
@@ -8,7 +8,7 @@
         "userInterfaceStyle": "dark",
         "scheme": "bring-my-med",
         "splash": {
-            "image": "./assets/splash.png",
+            "image": "./assets/pills.png",
             "resizeMode": "contain",
             "backgroundColor": "#ffffff"
         },
